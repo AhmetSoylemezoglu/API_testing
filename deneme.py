@@ -32,7 +32,7 @@ def main(page: ft.Page):
     page.add(
         ft.Row(controls=[
             ft.TextField(label="Your Text:",width=200),
-            ft.ElevatedButton(text="Say my name!")
+            ft.ElevatedButton(text="Find Language!")
         ])
     )
 
