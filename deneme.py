@@ -1,24 +1,17 @@
-#nicegui modülünü deneyecem
-from nicegui import ui
+import flet as ft
+import time
 
-def chng():
-    a.text+="yazı değişti"
+def main(page: ft.Page):
+    page.title = "Flet counter example"
 
+    text = ft.Text(value="Merhaba dünya", color="white")
+    page.add(text)
 
-ui.page_title("benim sitem")
-a = ui.label("merhaba dünya 2")
-ui.label("2. yazı bu da")
-
-
-
-ui.button("bana bas", on_click=chng)
-
+    for i in range(30):
+        text.value = i
+        time.sleep(1)
+        page.update()
 
 
+ft.app(main)
 
-
-
-
-
-
-ui.run()
